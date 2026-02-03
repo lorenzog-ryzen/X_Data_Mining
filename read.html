@@ -363,6 +363,11 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nube-de-palabras">Nube de palabras</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conteo-por-barras">Conteo por Barras</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posibilidad-de-vigilar-la-distribucion-de-las-connotaciones-por-localidad">Posibilidad de vigilar la distribucion de las connotaciones por localidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lugares-sin-ninguna-limpieza">lugares sin ninguna limpieza</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#se-podria-hacer-lo-mismo-por-las-fechas">Se podría hacer lo mismo por las fechas</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -490,7 +495,7 @@
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/8e858c07b3d6a05ef595bae991e0b6e339c9713a06ec86a0a69918ed47885757.png" src="_images/8e858c07b3d6a05ef595bae991e0b6e339c9713a06ec86a0a69918ed47885757.png" />
+<img alt="_images/db141784938af72fb8b6ec568840a524a133752bab159d57771e00cd6f5a1f3f.png" src="_images/db141784938af72fb8b6ec568840a524a133752bab159d57771e00cd6f5a1f3f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -592,6 +597,64 @@
 </div>
 </div>
 </section>
+<section id="posibilidad-de-vigilar-la-distribucion-de-las-connotaciones-por-localidad">
+<h2>Posibilidad de vigilar la distribucion de las connotaciones por localidad<a class="headerlink" href="#posibilidad-de-vigilar-la-distribucion-de-las-connotaciones-por-localidad" title="Link to this heading">#</a></h2>
+<p><img alt="" src="_images/img5.png" /></p>
+<p>Debido a que esto es texto libre se podria hacer un barrido seleccionando las ciudades mas importantes. Por tanto, se mostraria la distribución de los ‘tipos’ de comentarios por zonas principales y las demás.</p>
+<p><img alt="" src="_images/img6.png" /></p>
+<p>Algo como esto, donde GX sea una zona seleccionada y el ‘Si’-‘No’ puede ser cambiado por proporcion de comentarios negativos y positivos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_excel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;data.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Contributors&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="lugares-sin-ninguna-limpieza">
+<h3>lugares sin ninguna limpieza<a class="headerlink" href="#lugares-sin-ninguna-limpieza" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_excel</span><span class="o">.</span><span class="n">Location</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Location
+Colombia                     20
+Bogotá, D.C., Colombia       17
+Medellín, Colombia            6
+Bogotá, Colombia              5
+Montería, Colombia            3
+                             ..
+El mejor lugar del mundo      1
+Cali                          1
+Valle del Cauca, Colombia     1
+In my shoes                   1
+Villavicencio, Meta           1
+Name: count, Length: 99, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">df_excel</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;bogo&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mask</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(39)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bogotá aparece 39 veces ~~ 39/300 = alrededor del 13% de los mensajes pertencen a bogotá.</p>
+</section>
+<section id="se-podria-hacer-lo-mismo-por-las-fechas">
+<h3>Se podría hacer lo mismo por las fechas<a class="headerlink" href="#se-podria-hacer-lo-mismo-por-las-fechas" title="Link to this heading">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -652,6 +715,11 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nube-de-palabras">Nube de palabras</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conteo-por-barras">Conteo por Barras</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posibilidad-de-vigilar-la-distribucion-de-las-connotaciones-por-localidad">Posibilidad de vigilar la distribucion de las connotaciones por localidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lugares-sin-ninguna-limpieza">lugares sin ninguna limpieza</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#se-podria-hacer-lo-mismo-por-las-fechas">Se podría hacer lo mismo por las fechas</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
