@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,8 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'read5';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Acercamiento a LLM" href="read6.html" />
-    <link rel="prev" title="Limpieza y preparación de los datos" href="read4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,6 +122,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,16 +179,11 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="read.html">Primer Vistazo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="read2.html">Levantamiento de datos (Explicación lógica)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="read3.html">Levantamiento de datos (Explicación técnica)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="read4.html">Limpieza y preparación de los datos</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ACERCAMIENTO POR AÑO</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="read6.html">Acercamiento a LLM</a></li>
 </ul>
 
     </div>
@@ -402,7 +397,12 @@ document.write(`
                   
   <section id="acercamiento-por-ano">
 <h1>ACERCAMIENTO POR AÑO<a class="headerlink" href="#acercamiento-por-ano" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -419,27 +419,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">unidecode</span><span class="w"> </span><span class="kn">import</span> <span class="n">unidecode</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span><span class="w"> </span><span class="nn">wordcloud</span><span class="w"> </span><span class="kn">import</span> <span class="n">WordCloud</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;unidecode&#39;
-</pre></div>
+</details>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="s1">&#39;processed&#39;</span><span class="p">,</span><span class="s1">&#39;usuarios_posts_fechas_.xlsx&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -448,16 +441,28 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agrupaciones_por_año</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2020</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create separate dataframes for each year</span>
+<span class="n">df_2020</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">]</span>
 <span class="n">df_2021</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2021</span><span class="p">]</span>
 <span class="n">df_2022</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2022</span><span class="p">]</span>
 <span class="n">df_2023</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2023</span><span class="p">]</span>
@@ -469,6 +474,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2020: 0 posts
 2021: 0 posts
@@ -477,30 +483,41 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2022</span><span class="p">[</span><span class="s1">&#39;post&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6218     @dignaccion @wilsona25901603 @hollmanibanezp @...
-6217     @petrogustavo ojo colombia  esto no es un jueg...
-29097    @yosefuribe ese resentimiento es el que no los...
-29096    https://t.co/ulv8kepfcj por un mejor vivir (sa...
-6216     @argirocasta888 que belleza la de francia , a ...
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14996    @dignaccion @wilsona25901603 @hollmanibanezp @...
+14995    @petrogustavo ojo colombia  esto no es un jueg...
+29434    @yosefuribe ese resentimiento es el que no los...
+29435    https://t.co/ulv8kepfcj por un mejor vivir (sa...
+14983    @argirocasta888 que belleza la de francia , a ...
                                ...                        
-38362    ahora si.... a vivir sabroso  como dijo la neg...
-11986    @maffenovoa todos los que votaron por petro a ...
-19955    @maffenovoa todos los que votaron por petro a ...
-25423    @wradiocolombia @gustavobolivar que se vaya a ...
-26845    @wradiocolombia @gustavobolivar que se vaya a ...
+38365    ahora si.... a vivir sabroso  como dijo la neg...
+20736    @maffenovoa todos los que votaron por petro a ...
+8496     @maffenovoa todos los que votaron por petro a ...
+26415    @wradiocolombia @gustavobolivar que se vaya a ...
+27654    @wradiocolombia @gustavobolivar que se vaya a ...
 Name: post, Length: 24181, dtype: object
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 <span class="n">stop_words</span><span class="o">.</span><span class="n">update</span><span class="p">([</span> <span class="s1">&#39;sabroso&#39;</span><span class="p">,</span> <span class="s1">&#39;petro&#39;</span><span class="p">,</span> <span class="s1">&#39;vivir&#39;</span><span class="p">,</span> <span class="s1">&#39;francia&#39;</span><span class="p">,</span> <span class="s1">&#39;Co&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;yo&#39;</span><span class="p">,</span>
@@ -510,11 +527,17 @@ Name: post, Length: 24181, dtype: object
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 <section id="ano-2022">
 <h1>AÑO 2022<a class="headerlink" href="#ano-2022" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text_all</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_2022</span><span class="p">[</span><span class="s1">&#39;post&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">wordcloud</span><span class="w"> </span><span class="kn">import</span> <span class="n">WordCloud</span>
@@ -529,6 +552,7 @@ Name: post, Length: 24181, dtype: object
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -540,7 +564,7 @@ Name: post, Length: 24181, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/be6f2e56d026b881476efab3630fe7669bfa05d6fb1070454a56e7d95538480a.png" src="_images/be6f2e56d026b881476efab3630fe7669bfa05d6fb1070454a56e7d95538480a.png" />
+<img alt="_images/ddb784619728e343644ab7d5d15cb447a6102f54f7b2e926c6d8cfd4c62d04c4.png" src="_images/ddb784619728e343644ab7d5d15cb447a6102f54f7b2e926c6d8cfd4c62d04c4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -568,7 +592,7 @@ Name: post, Length: 24181, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3570be11c651774b6ad7805483e82a891d2e376a98a8dcde1b8857cd53b28971.png" src="_images/3570be11c651774b6ad7805483e82a891d2e376a98a8dcde1b8857cd53b28971.png" />
+<img alt="_images/89f618b492ba10ee7b9ecf124699f6493a3d053600055660cbf90c40d0c6a67d.png" src="_images/89f618b492ba10ee7b9ecf124699f6493a3d053600055660cbf90c40d0c6a67d.png" />
 </div>
 </div>
 </section>
@@ -583,7 +607,8 @@ Name: post, Length: 24181, dtype: object
     <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
     <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
     <span class="n">stopwords</span><span class="o">=</span><span class="n">stop_words</span><span class="p">,</span>
-    <span class="n">collocations</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>   <span class="c1"># evita palabras pegadas</span>
+    <span class="n">collocations</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>   
+    <span class="c1"># evita palabras pegadas</span>
     <span class="n">max_words</span><span class="o">=</span><span class="mi">200</span>
 <span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">text_all</span><span class="p">)</span>
 
@@ -595,7 +620,7 @@ Name: post, Length: 24181, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6c0270a6491f9e965744025ea96285bc1896329c355c8a74be095b42385d66c2.png" src="_images/6c0270a6491f9e965744025ea96285bc1896329c355c8a74be095b42385d66c2.png" />
+<img alt="_images/2803e8d58ca2b84d312c119c18016c039bbbd2f9bec22c0e8a71b81a42d12882.png" src="_images/2803e8d58ca2b84d312c119c18016c039bbbd2f9bec22c0e8a71b81a42d12882.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -623,7 +648,7 @@ Name: post, Length: 24181, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0f5f13bdd1e41b6893f74fcbaaf493ddf8c1104ce77a21349ba24944cb27e513.png" src="_images/0f5f13bdd1e41b6893f74fcbaaf493ddf8c1104ce77a21349ba24944cb27e513.png" />
+<img alt="_images/8cf77d5739c3a334ca64ec6e82281890b05456cb158c30219d504916f1a498d9.png" src="_images/8cf77d5739c3a334ca64ec6e82281890b05456cb158c30219d504916f1a498d9.png" />
 </div>
 </div>
 </section>
@@ -650,7 +675,7 @@ Name: post, Length: 24181, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/e10f4d27e74b54ee1cb59ae11508650c358384a069f5f5664ada219a0046b66b.png" src="_images/e10f4d27e74b54ee1cb59ae11508650c358384a069f5f5664ada219a0046b66b.png" />
+<img alt="_images/323887badc5b85022bdc6988414beeb88c605a232388d9c9eaf6ec15b2e518af.png" src="_images/323887badc5b85022bdc6988414beeb88c605a232388d9c9eaf6ec15b2e518af.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -678,73 +703,7 @@ Name: post, Length: 24181, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b607834db724da046fbb37e67b8ea3929ad38d44e5a943e66d03214e39cdd305.png" src="_images/b607834db724da046fbb37e67b8ea3929ad38d44e5a943e66d03214e39cdd305.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">])</span>
-
-<span class="c1"># Crear año-mes</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;year_month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;UTC Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
-
-<span class="c1"># 🔹 Total posts</span>
-<span class="n">posts_per_month</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year_month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-
-<span class="c1"># 🔹 Filtrar posts con &quot;negr&quot;</span>
-<span class="n">mask</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;post&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;negr&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">df_negro</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
-<span class="n">posts_negro_per_month</span> <span class="o">=</span> <span class="n">df_negro</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year_month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-<span class="n">mask_1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;post&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;mico|simio|mica&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">df_mico</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">mask_1</span><span class="p">]</span>
-<span class="n">posts_mico_per_month</span> <span class="o">=</span> <span class="n">df_mico</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year_month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-<span class="n">posts_mico_per_month</span> <span class="o">=</span> <span class="n">posts_mico_per_month</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">posts_per_month</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Alinear índices</span>
-<span class="n">posts_negro_per_month</span> <span class="o">=</span> <span class="n">posts_negro_per_month</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">posts_per_month</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Convertir índices</span>
-<span class="n">posts_per_month</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">posts_per_month</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
-<span class="n">posts_negro_per_month</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">posts_negro_per_month</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
-<span class="n">posts_mico_per_month</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">posts_mico_per_month</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
-
-<span class="c1"># 📊 Crear subplots</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># 🔹 Plot 1: Total</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">posts_per_month</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">posts_per_month</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Total de Posts por Mes&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Cantidad&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># 🔹 Plot 2: Posts con &quot;negr&quot;</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">posts_negro_per_month</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">posts_negro_per_month</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> 
-             <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Posts con &#39;negro/negra&#39; por Mes&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Fecha&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Cantidad&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># 🔹 Plot 2: Posts con &quot;mico&quot; o &quot;sim&quot;</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">posts_mico_per_month</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">posts_mico_per_month</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> 
-             <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Posts con &#39;mico|simio|mica&#39; por Mes&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Fecha&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Cantidad&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-
-<span class="c1"># Rotar fechas</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/429441f18957a73d7467f2b9ff960985348467077faf3729ce4681d253afc1fb.png" src="_images/429441f18957a73d7467f2b9ff960985348467077faf3729ce4681d253afc1fb.png" />
+<img alt="_images/fab5700300e2219b12e207ba94d58f11348ce434128db797cd6d333e9a794f16.png" src="_images/fab5700300e2219b12e207ba94d58f11348ce434128db797cd6d333e9a794f16.png" />
 </div>
 </div>
 </section>
@@ -779,24 +738,6 @@ Name: post, Length: 24181, dtype: object
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="read4.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Limpieza y preparación de los datos</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="read6.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Acercamiento a LLM</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

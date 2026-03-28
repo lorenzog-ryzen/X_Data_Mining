@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,7 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'read4';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ACERCAMIENTO POR AÑO" href="read5.html" />
     <link rel="prev" title="Levantamiento de datos (Explicación técnica)" href="read3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,11 +183,6 @@
 <li class="toctree-l1"><a class="reference internal" href="read2.html">Levantamiento de datos (Explicación lógica)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="read3.html">Levantamiento de datos (Explicación técnica)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Limpieza y preparación de los datos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="read5.html">ACERCAMIENTO POR AÑO</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="read6.html">Acercamiento a LLM</a></li>
 </ul>
 
     </div>
@@ -407,18 +401,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">unidecode</span><span class="w"> </span><span class="kn">import</span> <span class="n">unidecode</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;unidecode&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <section id="ingesta-y-estructura-del-conjunto-de-datos-y-eliminacion-de-duplicados">
 <h2>Ingesta y estructura del conjunto de datos y Eliminación de duplicados<a class="headerlink" href="#ingesta-y-estructura-del-conjunto-de-datos-y-eliminacion-de-duplicados" title="Link to this heading">#</a></h2>
@@ -442,13 +424,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6350
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3809
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas antes de limpieza&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6251
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3796
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
@@ -466,37 +448,13 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8790
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6350
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas antes de limpieza&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8756
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5003
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas antes de limpieza&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4995
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5006
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas antes de limpieza&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4988
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6251
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
@@ -514,13 +472,37 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3809
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8790
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas antes de limpieza&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3796
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8756
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5006
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas antes de limpieza&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4988
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5003
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas antes de limpieza&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4995
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;numero de columnas despues de limpieza&#39;
@@ -556,42 +538,42 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>3782</th>
-      <td>@Mayralaverdef</td>
-      <td>@FVallejoQuotes Jajajaja mejor fue mi primo qu...</td>
-      <td>2024-01-02 17:08:02</td>
+      <th>20</th>
+      <td>@morfeomorfeo10</td>
+      <td>Sin tetas NO hay paraíso\nParaíso fiscal, vivi...</td>
+      <td>2024-05-31 11:19:19</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>@UlisesVarg12810</td>
+      <td>@XPost1A Totalmente muy de acuerdo con usted m...</td>
+      <td>2024-05-31 10:57:09</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>3783</th>
-      <td>@mercurio444</td>
-      <td>El terrorista del ELN ANTONIO GARCÍA quiere vi...</td>
-      <td>2024-01-02 14:45:07</td>
+      <th>22</th>
+      <td>@Martis54114091</td>
+      <td>Se debe sentir mucha impotencia, como la que s...</td>
+      <td>2024-05-31 10:01:08</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>3784</th>
-      <td>@EmiroBermudez5</td>
-      <td>@ByViral24 @petrogustavo @WRadioColombia Ese e...</td>
-      <td>2024-01-02 13:57:49</td>
+      <th>23</th>
+      <td>@ter16326</td>
+      <td>@cabasgustavo @fecode Pero dé qué se quejan lo...</td>
+      <td>2024-05-31 03:12:42</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>3785</th>
-      <td>@ruthcastroalzat</td>
-      <td>@mauriciomatri Hay si chillan estos mal nacido...</td>
-      <td>2024-01-02 13:37:46</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3786</th>
-      <td>@LilianaToloza16</td>
-      <td>@andrasarguello Me encanta verlos retorcerse d...</td>
-      <td>2024-01-02 13:33:54</td>
+      <th>25</th>
+      <td>@bertha57161106</td>
+      <td>El gran cambio robando a las personas de bien ...</td>
+      <td>2024-05-31 01:24:59</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -712,15 +694,6 @@ document.write(`
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Levantamiento de datos (Explicación técnica)</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="read5.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ACERCAMIENTO POR AÑO</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
